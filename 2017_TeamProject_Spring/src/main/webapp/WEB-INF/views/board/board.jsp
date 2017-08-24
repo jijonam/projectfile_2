@@ -93,8 +93,7 @@ window.onload=function(){
 					<div class="container">
 						<table>
 							<tr>
-							<img width="80" height="50"
-								src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/imagesP0043KUI.png">
+							<img width="80" height="50" src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/imagesP0043KUI.png">
 								<td>
 									
 									<!-- 검색 메뉴 -->
