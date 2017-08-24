@@ -57,7 +57,7 @@
 								data-toggle="dropdown" href="#">토익 <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="${ pageContext.request.contextPath }/pages/signup_page.do">수강신청</a></li>
-									<li><a href="${ pageContext.request.contextPath }/pages/board_list.do">게시판</a></li>
+									<li><a href="${ pageContext.request.contextPath }/board/board_list.do">게시판</a></li>
 								</ul></li>
 							<li class="dropdown"><a class="dropdown-toggle"
 								data-toggle="dropdown" href="#">토플<span class="caret"></span></a>
