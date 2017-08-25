@@ -76,32 +76,42 @@
 					
 					<div class="container">
 						<h2>MyClass</h2>
-						<table class="table table-hover">
-							<thead>
-								<tr>
-									<th>Firstname</th>
-									<th>Lastname</th>
-									<th>Email</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>John</td>
-									<td>Doe</td>
-									<td>john@example.com</td>
-								</tr>
-								<tr>
-									<td>Mary</td>
-									<td>Moe</td>
-									<td>mary@example.com</td>
-								</tr>
-								<tr>
-									<td>July</td>
-									<td>Dooley</td>
-									<td>july@example.com</td>
-								</tr>
-							</tbody>
-						</table>
+						<div class="myclass_div_1">
+						<ul class="myclass_ul_1">
+							<li>
+								<strong>강의관리</strong>
+								<div class="myclass_div_2">
+								<ul>
+									<li><a href="#">일반강의</a></li>
+									<li><a href="#">프리패스</a></li>
+									<li><a href="#">모의고사</a></li>									
+								</ul>
+								</div>							
+							</li>
+							
+							<li>
+								<strong>수강관리</strong>
+								<div class="myclass_div_2">
+								<ul>
+									<li><a href="#">일시정지 신청</a></li>
+									<li><a href="#">수강연장 신청</a></li>
+									<li><a href="#">수강 및 출석확인증 출력</a></li>									
+								</ul>
+								</div>							
+							</li>
+							
+							<li>
+								<strong>결제관리</strong>
+								<div class="myclass_div_2">
+								<ul>
+									<li><a href="#">장바구니</a></li>
+									<li><a href="#">내 포인트 확인하기</a></li>
+									<li><a href="#">강의결제 내역</a></li>									
+								</ul>
+								</div>							
+							</li>						
+						</ul>
+						</div>
 					</div>	
 					
 					
