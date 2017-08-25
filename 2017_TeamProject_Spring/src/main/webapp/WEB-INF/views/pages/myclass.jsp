@@ -87,8 +87,7 @@
 									<li><a href="#">모의고사</a></li>									
 								</ul>
 								</div>							
-							</li>
-							
+							</li>							
 							<li>
 								<strong>수강관리</strong>
 								<div class="myclass_div_2">
