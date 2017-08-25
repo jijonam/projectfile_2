@@ -130,6 +130,7 @@ public class BoardController {
 		return "redirect:board_list.do";
 	}
 	
+	
 	@RequestMapping("/board/board_view.do")
 	public String view(int idx,
 					   HttpServletRequest request){
