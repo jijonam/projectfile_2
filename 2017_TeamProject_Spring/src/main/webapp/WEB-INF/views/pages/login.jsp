@@ -93,7 +93,8 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="${ pageContext.request.contextPath }/pages/index.jsp" class="btn btn-lg btn-success btn-block">Login</a>
+                                <input type="button" class="btn btn-lg btn-success btn-block" value="Login" onclick="login(this.form);">
+                                <a href="${ pageContext.request.contextPath }/pages/join_form.do" class="btn btn-lg btn-success btn-block">Join</a>
                             </fieldset>
                         </form>
                     </div>
