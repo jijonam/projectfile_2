@@ -5,7 +5,7 @@
 
 <head>
 <title>답글</title>
-<link rel="stylesheet" href="../startbootstrap-sb-admin-2-gh-pages/board/css/style.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/bootstrap/board_css/style.css" type="text/css">
 <script language=javascript>
 
 
@@ -62,7 +62,7 @@ function send_check()
 <td>
 <table width="690" height="50" border="0" cellpadding="0" cellspacing="0">
 	<tr>
-		<img width="80" height="50" src="../startbootstrap-sb-admin-2-gh-pages/board/img/imagesP0043KUI.png">
+		<img width="80" height="50" src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/imagesP0043KUI.png">
 	</tr>
 </table>
 <!--타이틀 영역의 끝-->
@@ -73,7 +73,7 @@ function send_check()
 
 <!-- reply_form.do?idx=2&page=3 -->
 
-<form name="f" method="get" action="reply.do"> 
+<form name="f" method="get" action="board_reply.do"> 
 <input type="hidden"  name="idx" value="${ param.idx }">
 <input type="hidden"  name="page" value="${ param.page }">
 <table width="750" border="0" cellspacing="0" cellpadding="0">
@@ -123,9 +123,9 @@ function send_check()
 		         <input type="image" src="" onclick="send(this.form); return false;">
 		         <button value="클릭" onclick="send(this.form); return false;" >
 		     -->
-			<img src="../startbootstrap-sb-admin-2-gh-pages/board/img/btn_reg.gif"  onClick="return send_check();" style="cursor:hand">
+			<img src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/btn_reg.gif"  onClick="return send_check();" style="cursor:hand">
 			<!-- <input type="image" src="../img/btn_reg.gif" onclick="send(this.form)"> -->
-			<img src="../startbootstrap-sb-admin-2-gh-pages/board/img/btn_back.gif" onClick="JavaScript:location.href='list.do?page=${param.page}'" style="cursor:hand">
+			<img src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/btn_back.gif" onClick="JavaScript:location.href='board_list.do?page=${param.page}'" style="cursor:hand">
 		</td>
 	</tr>
 </table>

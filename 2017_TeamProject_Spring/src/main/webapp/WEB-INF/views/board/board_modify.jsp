@@ -26,7 +26,6 @@ function send_check()
 		f.name.focus();
 		return false;
 	}
-	
 	if (f.content.value == '')
 	{
 		alert('내용을 입력하세요');
