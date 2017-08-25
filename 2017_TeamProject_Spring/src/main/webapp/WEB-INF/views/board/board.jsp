@@ -110,7 +110,6 @@ window.onload=function(){
 									<input id="search" type="image"
 										src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/search_button.jpg"
 										width="60" height="20" onclick="find();">
-									
 							</tr>
 							<tr>
 								<td>
@@ -153,7 +152,7 @@ window.onload=function(){
 																</c:forEach> <!-- 답글이면 ㄴ 달아라  --> <c:if test="${ vo.depth ne 0 }">
 				 	  												└
 																</c:if> <a
-																href="view.do?idx=${ vo.idx }&page=${ empty param.page ? 1 : param.page }&search=${param.search}&search_text=${param.search_text}"
+																href="board_view.do?idx=${ vo.idx }&page=${ empty param.page ? 1 : param.page }&search=${param.search}&search_text=${param.search_text}"
 																class="num"> ${ vo.subject }<!-- 제목 -->
 															</a>
 															</td>
@@ -206,7 +205,7 @@ window.onload=function(){
 										<tr>
 											<td><img
 												src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/btn_reg.gif"
-												onClick="JavaScript:location.href='insert_form.do'"
+												onClick="JavaScript:location.href='board_insert_form.do'"
 												style="cursor: hand"></td>
 										</tr>
 

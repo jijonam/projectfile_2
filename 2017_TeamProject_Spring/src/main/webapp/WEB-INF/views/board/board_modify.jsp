@@ -5,7 +5,7 @@
 
 <head>
 <title>쓰기</title>
-<link rel="stylesheet" href="../startbootstrap-sb-admin-2-gh-pages/board/css/style.css" type="text/css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/bootstrap/board_css/style.css" type="text/css">
 <script language=javascript>
 
 function send_check()
@@ -40,7 +40,7 @@ function send_check()
 		f.pwd.focus();
 		return false;
 	}
-	f.action="modify.do";
+	f.action="board_modify.do";
 	
 	f.submit();
 }
@@ -56,7 +56,7 @@ function send_check()
 <table width="690" height="50" border="0" cellpadding="0" cellspacing="0">
 	<tr>
 		<td width="30"/>
-		<img width="80" height="50" src="../startbootstrap-sb-admin-2-gh-pages/board/img/imagesP0043KUI.png">
+		<img width="80" height="50" src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/imagesP0043KUI.png">
 	</tr>
 </table>
 <!--타이틀 영역의 끝-->
@@ -64,7 +64,7 @@ function send_check()
 </tr>
 <tr>
 <td>
-<form name="f" method="post" action="insert.do">
+<form name="f" method="post" action="board_insert.do">
 <input name="idx" type="hidden" value="${vo.idx}">
 <input type="hidden"  name="page" value="${ param.page }"> 
 <table width="750" border="0" cellspacing="0" cellpadding="0">
@@ -114,9 +114,9 @@ function send_check()
 		         <input type="image" src="" onclick="send(this.form); return false;">
 		         <button value="클릭" onclick="send(this.form); return false;" >
 		     -->
-			<img src="../startbootstrap-sb-admin-2-gh-pages/board/img/btn_modify.gif"  onClick="return send_check();" style="cursor:hand">
+			<img src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/btn_modify.gif"  onClick="return send_check();" style="cursor:hand">
 			<!-- <input type="image" src="../img/btn_reg.gif" onclick="send(this.form)"> -->
-			<img src="../startbootstrap-sb-admin-2-gh-pages/board/img/btn_back.gif" onClick="JavaScript:location.href='list.do?page=${param.page}'" style="cursor:hand">
+			<img src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/btn_back.gif" onClick="JavaScript:location.href='board_list.do?page=${param.page}'" style="cursor:hand">
 		</td>
 	</tr>
 </table>
