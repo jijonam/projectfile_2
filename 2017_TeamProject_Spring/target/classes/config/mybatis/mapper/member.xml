@@ -9,7 +9,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	        parameterType="String"
 	        resultType="vo.MemberVo">
         select * from test_member where email=#{ email }	  
-          
 	</select>
 	
 	
