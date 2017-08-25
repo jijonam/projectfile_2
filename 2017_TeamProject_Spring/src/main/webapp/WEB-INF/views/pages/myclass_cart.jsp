@@ -70,7 +70,7 @@
 									<li><a href="#">게시판</a></li>
 								</ul></li>
 							<li><a href="#">교재</a></li>
-							<li><a href="#">마이클래스</a></li>
+							<li><a href="${ pageContext.request.contextPath }/pages/myclass.do">게시판</a></li>
 						</ul>
 					</div>
 
