@@ -107,7 +107,7 @@
 									<li><a href="#">게시판</a></li>
 								</ul></li>
 							<li><a href="#">교재</a></li>
-							<li><a href="#">마이클래스</a></li>
+							<li><a href="${ pageContext.request.contextPath }/pages/myclass.do">마이클래스</a></li>
 						</ul>
 					</div>
 					
@@ -202,6 +202,7 @@
 			            </ul>
 			        </div>
 			    </div>
+			    
 			        			    
 					<div class="section">
 					<div class="btn_srch_result">
@@ -214,8 +215,6 @@
 	        		</div>
 	        		</div>
 	        	</form>
-			    
-			    
 			    </div>			    
 			    </div>			    
 			    
@@ -223,8 +222,7 @@
  				
 				<div id="container">				
                 <div id="content">     
-                
-            	
+                            	
             	<!-- 게시물이 없을 경우 -->
             	<c:if test="${ empty list }">
                 	<div align="center" style="color:red;">등록된 강의가 없습니다</div>

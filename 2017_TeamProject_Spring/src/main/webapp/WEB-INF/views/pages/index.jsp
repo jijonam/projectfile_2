@@ -1,4 +1,7 @@
-<%@ page session="false" pageEncoding="utf-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>	
 <!DOCTYPE html>
 <html lang="en">
 
@@ -244,22 +247,64 @@
                     <!-- /.dropdown-alerts -->
                 </li>
                 <!-- /.dropdown -->
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="${ pageContext.request.contextPath }/pages/login_form.do"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                        </li>
-                    </ul>
-                    <!-- /.dropdown-user -->
-                </li>
+                <c:if test="${ empty sessionScope.user }">
+                
+                	<li class="dropdown">
+                    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                       		<i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    	</a>
+                    	<ul class="dropdown-menu dropdown-user">
+                        	<li><a href="login_form.do"><i class="fa fa-sign-out fa-fw"></i> Login</a>
+                        	</li>
+                    	</ul>
+                   	 <!-- /.dropdown-user -->
+                	</li>
                 <!-- /.dropdown -->
+                
+                </c:if>
+                
+                <c:if test="${ sessionScope.user.rating eq 'master' }">
+                
+                	<li class="dropdown">
+                    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                       		<i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    	</a>
+                    	<ul class="dropdown-menu dropdown-user">
+                        	<li><a href="#"><i class="fa fa-user fa-fw"></i> 나는 마스터다.</a>
+                        	</li>
+                        	<li><a href="#"><i class="fa fa-gear fa-fw"></i> 회원관리</a>
+                        	</li>
+                        	<li class="divider"></li>
+                        	<li><a href="logout.do"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        	</li>
+                    	</ul>
+                   	 <!-- /.dropdown-user -->
+                	</li>
+                <!-- /.dropdown -->
+                
+                </c:if>
+                
+                <c:if test="${ sessionScope.user.rating eq 'basic' }">
+                
+                	<li class="dropdown">
+                    	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                       		<i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    	</a>
+                    	<ul class="dropdown-menu dropdown-user">
+                        	<li><a href="#"><i class="fa fa-user fa-fw"></i> ${ sessionScope.user.name }님의 정보</a>
+                        	</li>
+                        	<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        	</li>
+                        	<li class="divider"></li>
+                        	<li><a href="logout.do"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        	</li>
+                    	</ul>
+                   	 <!-- /.dropdown-user -->
+                	</li>
+                <!-- /.dropdown -->
+                
+                </c:if>
+                
             </ul>
             <!-- /.navbar-top-links -->
 

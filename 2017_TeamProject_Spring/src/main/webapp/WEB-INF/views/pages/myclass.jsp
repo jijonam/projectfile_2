@@ -61,16 +61,16 @@
 								data-toggle="dropdown" href="#">토익 <span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="${ pageContext.request.contextPath }/pages/signup_page.do">수강신청</a></li>
-									<li><a href="#">게시판</a></li>
+									<li><a href="${ pageContext.request.contextPath }/board/board_list.do">게시판</a></li>
 								</ul></li>
 							<li class="dropdown"><a class="dropdown-toggle"
 								data-toggle="dropdown" href="#">토플<span class="caret"></span></a>
 								<ul class="dropdown-menu">
 									<li><a href="#">수강신청</a></li>
-									<li><a href="#">게시판</a></li>
+									<li><a href="${ pageContext.request.contextPath }/pages/myclass.do">게시판</a></li>
 								</ul></li>
 							<li><a href="#">교재</a></li>
-							<li><a href="#">마이클래스</a></li>
+							<li><a href="${ pageContext.request.contextPath }/pages/myclass.do">마이클래스</a></li>
 						</ul>
 					</div>
 					
