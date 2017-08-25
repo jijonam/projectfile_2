@@ -98,5 +98,15 @@ public class MemberController {
 		
 		return "redirect:home.do";
 	}
+	
+	@RequestMapping("/pages/logout.do")
+	public String logout(){
+		
+		session = request.getSession();
+		
+		session.invalidate();
+		
+		return "redirect:login_form.do";
+	}
 
 }
