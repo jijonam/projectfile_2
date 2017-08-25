@@ -127,7 +127,7 @@ public class BoardController {
 		
 		int res = board_dao.insert(vo);
 		
-		return "redirect:list.do";
+		return "redirect:board_list.do";
 	}
 	
 	@RequestMapping("/board/board_view.do")
@@ -156,7 +156,7 @@ public class BoardController {
 		
 		String page = request.getParameter("page");
 		
-		return "redirect:list.do?page="+page;
+		return "redirect:board_list.do?page="+page;
 	}
 	
 	@RequestMapping("/board/board_modify_form.do")
@@ -182,10 +182,10 @@ public class BoardController {
 		int res = board_dao.update(vo);
 		
 		String page = request.getParameter("page");
-		return "redirect:list.do?page="+page;
+		return "redirect:board_list.do?page="+page;
 	}
 	
-	@RequestMapping("/pages/board_reply_form.do")
+	@RequestMapping("/board/board_reply_form.do")
 	public String reply_form(){
 		
 		return VIEW_PATH + "board_reply.jsp";
@@ -215,7 +215,7 @@ public class BoardController {
 		
 		model.addAttribute("page", page);
 		
-		return "redirect:list.do";
+		return "redirect:board_list.do";
 		
 	}
 	
