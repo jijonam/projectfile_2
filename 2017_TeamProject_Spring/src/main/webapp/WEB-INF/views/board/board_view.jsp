@@ -19,6 +19,7 @@
 			f.c_pwd.focus();
 			return;
 		}
+		
 		//ajax로 비번 맞는지 확인
 		var url = "board_check_pwd.do";// action.BoardCheckPwdAction
 		var param="idx="+idx+"&c_pwd="

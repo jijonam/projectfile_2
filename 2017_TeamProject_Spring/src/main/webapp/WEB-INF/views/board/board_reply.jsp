@@ -96,7 +96,6 @@ function send_check()
 		
 		<TEXTAREA NAME='content' rows="9" cols="65"></TEXTAREA>
 		
-
 	</td></tr>
     <tr>
 		<td height="25" class="td_d_4">비밀번호</td>

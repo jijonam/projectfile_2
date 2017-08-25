@@ -39,7 +39,7 @@ function send_check()
 		f.pwd.focus();
 		return false;
 	}
-	
+
 	f.submit();
 }
 
