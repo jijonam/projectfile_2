@@ -93,7 +93,7 @@ public class BoardController {
 		return VIEW_PATH + "board.jsp";
 	}
 
-	@RequestMapping("/pages/board_check_pwd.do")
+	@RequestMapping("/board/board_check_pwd.do")
 	@ResponseBody
 	public String check_pwd(int idx, String c_pwd){
 		
@@ -110,12 +110,12 @@ public class BoardController {
 		return resultStr;
 	}
 
-	@RequestMapping("/pages/board_insert_form.do")
+	@RequestMapping("/board/board_insert_form.do")
 	public String insert_form(){
 		return VIEW_PATH + "board_write.jsp";
 	}
 	
-	@RequestMapping("/pages/board_insert.do")
+	@RequestMapping("/board/board_insert.do")
 	public String insert(BoardVo vo,
 						 HttpServletRequest request){
 		
@@ -130,7 +130,7 @@ public class BoardController {
 		return "redirect:list.do";
 	}
 	
-	@RequestMapping("/pages/board_view.do")
+	@RequestMapping("/board/board_view.do")
 	public String view(int idx,
 					   HttpServletRequest request){
 		
@@ -147,17 +147,19 @@ public class BoardController {
 		return VIEW_PATH + "board_view.jsp";
 	}
 	
-	@RequestMapping("/pages/board_delete.do")
+	@RequestMapping("/board/board_delete.do")
 	public String delete(int idx,
 						 HttpServletRequest request){
 		
 		int res = board_dao.delete(idx);
+		System.out.println(idx);
+		
 		String page = request.getParameter("page");
 		
 		return "redirect:list.do?page="+page;
 	}
 	
-	@RequestMapping("/pages/board_modify_form.do")
+	@RequestMapping("/board/board_modify_form.do")
 	public String modify_form(int idx,
 							  HttpServletRequest request){
 		
@@ -168,7 +170,7 @@ public class BoardController {
 		return VIEW_PATH + "board_modify.jsp";
 	}
 	
-	@RequestMapping("/pages/board_modify.do")
+	@RequestMapping("/board/board_modify.do")
 	public String modify(BoardVo vo,
 						 int idx,
 						 HttpServletRequest request){
@@ -189,7 +191,7 @@ public class BoardController {
 		return VIEW_PATH + "board_reply.jsp";
 	}
 	
-	@RequestMapping("/pages/board_reply.do")
+	@RequestMapping("/board/board_reply.do")
 	public String reply(int idx,
 						BoardVo vo,
 						HttpServletRequest request,

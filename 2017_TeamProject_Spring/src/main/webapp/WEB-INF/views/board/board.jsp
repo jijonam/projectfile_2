@@ -110,7 +110,6 @@ window.onload=function(){
 									<input id="search" type="image"
 										src="${ pageContext.request.contextPath }/resources/bootstrap/board_img/search_button.jpg"
 										width="60" height="20" onclick="find();">
-									
 							</tr>
 							<tr>
 								<td>
