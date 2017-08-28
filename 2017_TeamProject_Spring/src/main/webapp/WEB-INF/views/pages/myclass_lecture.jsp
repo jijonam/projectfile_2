@@ -114,8 +114,33 @@
 						</div>
 					</div>
 
+					<div class="container">
+						<h3>일반강의</h3>
+						<ul class="nav nav-pills">
+							<li class="active"><a data-toggle="pill" href="#home">현재수강중인 강의</a></li>
+							<li><a data-toggle="pill" href="#menu1">일시 정지중인 강의</a></li>
+							<li><a data-toggle="pill" href="#menu2">수강 완료된 강의</a></li>
+						</ul>
+						
+					</div>
 
-					
+					<div class="container">
+					<div class="tab-content">
+						<div id="home" class="tab-pane fade in active">
+							<h3>HOME</h3>
+							<p>Some content.</p>
+						</div>
+						<div id="menu1" class="tab-pane fade">
+							<h3>Menu 1</h3>
+							<p>Some content in menu 1.</p>
+						</div>
+						<div id="menu2" class="tab-pane fade">
+							<h3>Menu 2</h3>
+							<p>Some content in menu 2.</p>
+						</div>
+					</div>
+
+
 
 
 

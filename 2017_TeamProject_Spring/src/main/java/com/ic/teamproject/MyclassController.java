@@ -17,5 +17,11 @@ public class MyclassController {
 		
 		return "/WEB-INF/views/pages/myclass.jsp";
 	}
+	
+	@RequestMapping("/pages/myclass_lecture.do")
+	public String myclass_lecture(){
+		
+		return "/WEB-INF/views/pages/myclass_lecture.jsp";
+	}
 
 }
