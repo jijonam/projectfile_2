@@ -40,7 +40,8 @@
 	</beans:bean>
 
 	<beans:bean class="com.ic.teamproject.MyclassController">
-	
+		<beans:property name="lecture_cart_dao" ref="lecture_cart_dao">				
+		</beans:property>
 	</beans:bean>
 
 </beans:beans>

@@ -16,5 +16,6 @@
 		<mapper resource="config/mybatis/mapper/signup.xml" />
 		<mapper resource="config/mybatis/mapper/board.xml" />
 		<mapper resource="config/mybatis/mapper/member.xml" />
+		<mapper resource="config/mybatis/mapper/lecture_cart.xml" />
 	</mappers>
 </configuration>

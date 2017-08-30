@@ -78,6 +78,20 @@
 	}
 </script>
 
+<script type="text/javascript">
+
+	function message(){
+		if(confirm("장바구니 페이지로 가시겠습니까?")){
+			location.href="${ pageContext.request.contextPath }/pages/myclass_cart_list.do";
+		}
+		return false;
+	}
+	
+</script>
+
+
+
+
 
 </head>
 
@@ -301,7 +315,9 @@
 							</ul>
 							<ul class="bt">
 								<li><a class="btn_m btn_type1 class" href="javascript:goLoginLayer()"><span>수강신청 &gt;</span></a></li>
-								<li><a class="btn_m btn_type2" href="${ pageContext.request.contextPath }/pages/myclass_cart_list.do">
+								<li>
+									<%-- <a class="btn_m btn_type2" href="${ pageContext.request.contextPath }/pages/myclass_cart_list.do"> --%>
+									<a class="btn_m btn_type2" href="#" onclick="return message();">
 									<span>장바구니담기</span>
 									</a>
 								</li>

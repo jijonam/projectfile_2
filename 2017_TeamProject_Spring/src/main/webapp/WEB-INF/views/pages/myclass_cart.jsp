@@ -113,9 +113,12 @@
 						</ul>
 						</div>
 					</div>
+					
+			
 
 					<div class="container">
-						<h2>장바구니</h2>						
+						<h2>장바구니</h2>
+						
 						<table class="table table-hover">
 							<thead>
 								<tr>
@@ -127,6 +130,15 @@
 								</tr>
 							</thead>
 							<tbody>
+							
+							<c:if test="${ empty requestScope.list }">
+								<tr>
+								<td colspan="5" align="center">
+									<p style="color: red;">등록된 상품이 없습니다</p>
+								</td>
+								</tr>
+							</c:if>
+							<c:forEach var="lecture_cart" items="${ list }">
 								<tr>
 									<td>John</td>
 									<td>Doe</td>
@@ -134,20 +146,11 @@
 									<td>500</td>
 									<td>ohn@example.com</td>
 								</tr>
-								<tr>
-									<td>Mary</td>
-									<td>Moe</td>
-									<td>mary@example.com</td>
-									<td>500</td>
-									<td>ohn@example.com</td>
-								</tr>
-								<tr>
-									<td>July</td>
-									<td>Dooley</td>
-									<td>july@example.com</td>
-									<td>500</td>
-									<td>ohn@example.com</td>
-								</tr>
+							</c:forEach>
+							
+								
+								
+								
 							</tbody>
 						</table>
 					</div>
