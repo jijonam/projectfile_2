@@ -284,7 +284,7 @@
                         <strong>${ vo.teacher } </strong>
                     </h4>
                     <div class="tip">
-                        <span class="txt">해커스영어 토익 총평강의 조회수 1위 (2015.01~11)</span><a class="tiper" href="#;"><!-- tooltip --></a>
+                        <span class="txt">1위 2017</span><a class="tiper" href="#;"><!-- tooltip --></a>
                         <div class="ly_tip"><span class="arr"></span>1</div>
                     </div>
                     <a class="btn_detail" href="#" target="_blank">선생님 자세히보기 &gt;</a>
