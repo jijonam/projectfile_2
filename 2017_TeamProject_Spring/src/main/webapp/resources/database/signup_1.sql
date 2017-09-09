@@ -1,35 +1,35 @@
---ÀÏ·Ã¹øÈ£°ü¸®°´Ã¼
+--ï¿½Ï·Ã¹ï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼
 drop sequence seq_lecture_idx
 create sequence seq_lecture_idx
 
 drop table lecture
---Å×ÀÌºí¸í
+--ï¿½ï¿½ï¿½Ìºï¿½ï¿½
 create table lecture
 (
-	idx int, --ÀÏ·Ã¹øÈ£
-	name varchar2(100) unique , --°­ÀÇ¸í
-	lecture_level varchar2(100), --·¹º§
-	teacher varchar2(100), --¼±»ı´Ô
-	book varchar2(100), --±³Àç
-	price varchar2(100), --°¡°İ
-	point varchar2(100), --Æ÷ÀÎÆ®Àû¸³
-	regdate date --µî·ÏÀÏÀÚ
+	idx int, --ï¿½Ï·Ã¹ï¿½È£
+	name varchar2(100) unique , --ï¿½ï¿½ï¿½Ç¸ï¿½
+	lecture_level varchar2(100), --ï¿½ï¿½ï¿½ï¿½
+	teacher varchar2(100), --ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	book varchar2(100), --ï¿½ï¿½ï¿½ï¿½
+	price varchar2(100), --ï¿½ï¿½ï¿½ï¿½
+	point varchar2(100), --ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½
+	regdate date --ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 )
 
 
 select * from lecture
 
---±âº»Å°¼³Á¤
+--ï¿½âº»Å°ï¿½ï¿½ï¿½ï¿½
 alter table lecture add constraint pk_lecture_idx primary key(idx)
 
 --sample data
-insert into lecture values(seq_lecture_idx.nextVal, 'ÃÊ±Ş°­ÀÇ', 'ÃÊ±Ş', 'ÃÊ±Ş¼±»ı´Ô', 'ÃÊ±Ş±³Àç', 
+insert into lecture values(seq_lecture_idx.nextVal, 'ì´ˆê¸‰ê°•ì˜', 'ì´ˆê¸‰', 'ì´ˆê¸‰ì„ ìƒë‹˜', 'ì´ˆê¸‰ì±…', 
 '100000', '5000', sysdate);
-insert into lecture values(seq_lecture_idx.nextVal, 'Áß±Ş°­ÀÇ', 'Áß±Ş', 'Áß±Ş¼±»ı´Ô', 'Áß±Ş±³Àç', 
+insert into lecture values(seq_lecture_idx.nextVal, 'ì¤‘ê¸‰ê°•ì˜', 'ì¤‘ê¸‰', 'ì¤‘ê¸‰ì„ ìƒë‹˜', 'ì¤‘ê¸‰ì±…', 
 '110000', '5500', sysdate);
-insert into lecture values(seq_lecture_idx.nextVal, '°í±Ş°­ÀÇ', '°í±Ş', '°í±Ş¼±»ı´Ô', '°í±Ş±³Àç', 
+insert into lecture values(seq_lecture_idx.nextVal, 'ê³ ê¸‰ê°•ì˜', 'ê³ ê¸‰', 'ê³ ê¸‰ì„ ìƒë‹˜', 'ê³ ê¸‰ì±…', 
 '120000', '6000', sysdate);
 
-delete from lecture where name='°í±Ş°­ÀÇ'
+delete from lecture where name=''
 
-select * from lecture where lecture_level in('ÃÊ±Ş', 'Áß±Ş') or teacher in('°í±Ş¼±»ı´Ô')
+select * from lecture where lecture_level in('ì´ˆê¸‰', 'ì¤‘ê¸‰') or teacher in('ì´ˆê¸‰ì„ ìƒë‹˜')

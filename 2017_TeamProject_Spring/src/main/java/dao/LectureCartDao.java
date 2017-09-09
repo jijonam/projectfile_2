@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -26,6 +27,30 @@ public class LectureCartDao {
 		
 		return list;		
 		
+	}
+
+	public LectureCartVo selectOne(Map map) {
+		LectureCartVo vo = null;
+		
+		vo = sqlSession.selectOne("lecture_cart_list_one", map);
+		
+		return vo;
+	}
+
+	public int insert(Map map) {
+		int res = 0;
+		
+		res = sqlSession.insert("lecture_cart_list_insert", map);
+		
+		return res;
+	}
+
+	public int delete(Map map) {
+		int res = 0;
+		
+		res = sqlSession.insert("lecture_cart_list_delete", map);
+		
+		return res;
 	}
 
 }

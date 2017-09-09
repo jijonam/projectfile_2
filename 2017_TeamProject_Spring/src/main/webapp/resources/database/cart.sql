@@ -1,6 +1,6 @@
 create sequence seq_lecture_cart_idx
 
---Àå¹Ù±¸´Ï Å×ÀÌºí
+--ï¿½ï¿½Ù±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºï¿½
 create table lecture_cart
 (
   cart_idx  int  primary key,
@@ -8,7 +8,7 @@ create table lecture_cart
   lecture_idx  int
 )
 
---lectureÅ×ÀÌºíÀÇ idx¿Í lecture_idx°£ÀÇ ¿Ü·¡Å° ¼³Á¤
+--lectureï¿½ï¿½ï¿½Ìºï¿½ï¿½ï¿½ idxï¿½ï¿½ lecture_idxï¿½ï¿½ï¿½ï¿½ ï¿½Ü·ï¿½Å° ï¿½ï¿½ï¿½ï¿½
 alter table lecture_cart drop constraint fk_cart_p_idx
 alter table lecture_cart
   add constraint fk_lecture_cart_lecture_idx foreign key(lecture_idx) 
@@ -20,24 +20,23 @@ alter table lecture_cart
 select * from lecture
 select * from test_member
 
-insert into lecture_cart values(seq_lecture_cart_idx.nextVal,41,5);
+insert into lecture_cart values(seq_lecture_cart_idx.nextVal,2,2);
 
 
-delete from cart where c_idx=24
+delete from lecture_cart where member_idx=2
 
 select * from lecture_cart
 
 commit
 
--- JoinÀ» ÅëÇØ¼­ Á¶È¸Á¤º¸¸¦ ÃßÃâ
+-- Joinï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 create or replace view lecture_cart_view
 as
 	select
-	   m.idx, p.p_idx, c_idx, p_num,p_name,p_price,p_saleprice,
-	   c_cnt, c_cnt* p_saleprice amount
-	from product p inner join  cart c on p.p_idx = c.p_idx inner join member m on m.idx = c.m_idx
+	   l.idx as l_idx, l.name, l.teacher, l.price, c.cart_idx, m.idx as m_idx
+	from lecture l inner join lecture_cart c on l.idx = c.lecture_idx inner join test_member m on m.idx = c.member_idx
 
-select * from cart_view;
+select * from lecture_cart_view;
 
---Àå¹Ù±¸´Ï »óÇ°ÀÇ ÃÑ°è
+--ï¿½ï¿½Ù±ï¿½ï¿½ï¿½ ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½Ñ°ï¿½
 select nvl(sum(amount),0) total from cart_view;

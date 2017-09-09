@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+
+	<select id="lecture_cart_list" parameterType="int" resultType="vo.LectureCartVo">
+        select * from lecture_cart_view where idx=#{idx}
+    </select>  
+    
+    <!-- <select id="cart_list_total" parameterType="int" resultType="int">
+        select nvl(sum(amount),0) total from cart_view where idx=#{idx}
+    </select>     
+     
+    <select id="cart_list_one" parameterType="java.util.Map" resultType="vo.CartVo">
+        select * from cart_view where p_idx=#{p_idx} and idx=#{m_idx}
+    </select>  
+    
+    <insert id="cart_list_insert" parameterType="java.util.Map" >
+    	insert into cart values(seq_cart_idx.nextVal,1,#{p_idx},#{m_idx})
+    </insert>
+    
+	<delete id="cart_list_delete" parameterType="java.util.Map">
+		delete from cart where p_idx=#{p_idx} and m_idx=#{m_idx}
+	</delete>
+	
+	<update id="cart_list_update" parameterType="java.util.Map" >
+		update cart set c_cnt=#{c_cnt} where p_idx=#{p_idx} and m_idx=#{m_idx}
+	</update> -->
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+

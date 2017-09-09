@@ -140,11 +140,14 @@
 							</c:if>
 							<c:forEach var="lecture_cart" items="${ list }">
 								<tr>
-									<td>John</td>
-									<td>Doe</td>
-									<td>john@example.com</td>
-									<td>500</td>
-									<td>ohn@example.com</td>
+									<td>${lecture_cart.name }</td>
+									<td>${lecture_cart.teacher }</td>
+									<td>${lecture_cart.price }</td>
+									<td>0</td>
+									<td>${lecture_cart.price }
+									<input type="button" value="삭제" style="border:1 solid black;cursor:hand" 
+									onclick="location.href='myclass_cart_delete.do?l_idx=${ lecture_cart.l_idx }'">
+									</td>
 								</tr>
 							</c:forEach>
 							

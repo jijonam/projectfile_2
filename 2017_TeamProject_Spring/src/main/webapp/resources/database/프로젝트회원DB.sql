@@ -1,24 +1,24 @@
--- ÀÏ·Ã¹øÈ£ °ü¸®°´Ã¼
+-- ï¿½Ï·Ã¹ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¼
 create sequence seq_test_member_idx
 
--- Å×ÀÌºí¸í
+-- ï¿½ï¿½ï¿½Ìºï¿½ï¿½
 create table test_member
 (
-   idx int,                 -- ÀÏ·Ã¹øÈ£
-   name varchar2(100),      -- È¸¿ø¸í
-   email varchar2(100) unique, -- ¾ÆÀÌµð
-   pwd varchar2(100),       -- ºñ¹Ð¹øÈ£
-   ip varchar2(100),        -- ¾ÆÀÌÇÇ
-   rating varchar2(50),     -- È¸¿øµî±Þ
-   regdate date             -- °¡ÀÔÀÏÀÚ
+   idx int,                 -- ï¿½Ï·Ã¹ï¿½È£
+   name varchar2(100),      -- È¸ï¿½ï¿½ï¿½ï¿½
+   email varchar2(100) unique, -- ï¿½ï¿½ï¿½Ìµï¿½
+   pwd varchar2(100),       -- ï¿½ï¿½Ð¹ï¿½È£
+   ip varchar2(100),        -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+   rating varchar2(50),     -- È¸ï¿½ï¿½ï¿½ï¿½ï¿½
+   regdate date             -- ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 )
 
--- ±âº»Å°¼³Á¤
+-- ï¿½âº»Å°ï¿½ï¿½ï¿½ï¿½
 alter table test_member add constraint pk_test_member_idx primary key(idx)
 
 -- sample data
 insert into test_member 
-values(seq_member_idx.nextVal, 'È«±æµ¿', 'hong@naver.com','1234', '127.0.0.1', 'master', sysdate);
+values(seq_test_member_idx.nextVal, 'ë‚˜ë‹¤', 'hong@naver.com','1234', '127.0.0.1', 'master', sysdate);
 
 select * from test_member
 

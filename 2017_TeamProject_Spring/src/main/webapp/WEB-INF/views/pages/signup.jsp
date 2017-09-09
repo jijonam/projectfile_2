@@ -76,16 +76,38 @@
   		}
 		
 	}
+	function check_cart(idx){
+		
+		if('${ empty user }'== 'true'){
+			location.href = '${ pageContext.request.contextPath }/pages/login_form.do';
+		}		
+		
+		//jQuery를 이용한 Ajax통신(넘겨지는 parameter가 JSON형식)
+		$.ajax( { 
+			url: '${ pageContext.request.contextPath }/pages/myclass_check_cart.do', 
+			data: { 'l_idx': idx }, //check_cart.do?p_idx=3
+			success: function(data){
+				var json = eval(data);
+				if( json[0].result == 'exist' ){
+					alert('이미 장바구니에 담겨져 있습니다');
+					return;
+				}
+				alert('장바구니에 담았습니다');
+				//장바구니에 담기
+				location.href='${ pageContext.request.contextPath }/pages/myclass_cart_insert.do?l_idx='+ idx;
+			}
+		} );
+	}
 </script>
 
 <script type="text/javascript">
 
-	function message(){
+	/* function message(){
 		if(confirm("장바구니 페이지로 가시겠습니까?")){
 			location.href="${ pageContext.request.contextPath }/pages/myclass_cart_list.do";
 		}
 		return false;
-	}
+	} */
 	
 </script>
 
@@ -317,8 +339,9 @@
 								<li><a class="btn_m btn_type1 class" href="javascript:goLoginLayer()"><span>수강신청 &gt;</span></a></li>
 								<li>
 									<%-- <a class="btn_m btn_type2" href="${ pageContext.request.contextPath }/pages/myclass_cart_list.do"> --%>
-									<a class="btn_m btn_type2" href="#" onclick="return message();">
-									<span>장바구니담기</span>
+									<!-- <a class="btn_m btn_type2" href="#" onclick="return message();"> -->
+									<input type="button" value="장바구니에 담기" onclick="check_cart('${ vo.idx }');" class="btn_m btn_type2"/>
+									<!-- <span>장바구니담기</span> -->
 									</a>
 								</li>
 							</ul>
