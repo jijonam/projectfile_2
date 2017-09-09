@@ -56,22 +56,7 @@ public class SignupController {
 			
 		}else{
 			if(level!=null){
-				 
-				/*for(int i=0; i<level.length; i++){
-					
-					if(level_str==null){
-						level_str = "'"  + level[i] +"'";
-					}else{
-						level_str = level_str + ",'" + level[i] + "'";
-					}					
-					
-					map.put("level"+"["+i+"]", level[i]);
-					//select * from where level like %level[0]%
-					
-					//map에 sql문을 저장
-					//map.put("level", "level in(초급,중급)");
-					System.out.println(level_str);
-				}*/
+				
 				map.put("level", level);		
 				//System.out.println(map.get("level"));
 				
