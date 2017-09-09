@@ -85,7 +85,7 @@
 		//jQuery를 이용한 Ajax통신(넘겨지는 parameter가 JSON형식)
 		$.ajax( { 
 			url: '${ pageContext.request.contextPath }/pages/myclass_check_cart.do', 
-			data: { 'l_idx': idx }, //check_cart.do?p_idx=3
+			data: { 'l_idx': idx }, //myclass_check_cart.do?l_idx=2
 			success: function(data){
 				var json = eval(data);
 				if( json[0].result == 'exist' ){

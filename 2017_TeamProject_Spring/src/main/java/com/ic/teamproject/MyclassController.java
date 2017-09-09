@@ -81,14 +81,7 @@ public class MyclassController {
 
 		//session login된 user정보를 binding
 		MemberVo vo2 = (MemberVo)session.getAttribute("user");
-		/*if(vo2==null){
-
-					//forward 
-					String forward_page = "/member/login_form.do";
-					request.getRequestDispatcher(forward_page).forward(request, response);
-
-				}*/
-
+		
 		Map map = new HashMap();
 		if(vo2 != null){
 			map.put("l_idx", l_idx);
