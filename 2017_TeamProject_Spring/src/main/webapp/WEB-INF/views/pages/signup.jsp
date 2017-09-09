@@ -242,7 +242,7 @@
 			        			    
 					<div class="section">
 					<div class="btn_srch_result">
-	            		<h3 class="tit_h4">총 <b class="fc_g">83개</b>의 강의가 검색되었습니다.</h3>
+	            		<h3 class="tit_h4">총 <b class="fc_g">개</b>의 강의가 검색되었습니다.</h3>
 	            		<div class="bt">
 	                		<a class="btn_m btn_type2" href="javascript:Reset()"><span>초기화</span></a>
 	                		<!-- <a class="btn_m btn_type3" href="#" onclick="send(this.form); return false"><span>조회</span></a> -->
@@ -275,8 +275,8 @@
 				
                 <div class="sbj">
 				    <span class="teacher">
-                        <a href="http://www.champstudy.com/?r=champstudy&amp;c=teacher/tc_toeic&amp;tci_id=23">
-                        <img style="width: 110px; height: 90px;" alt="" src="/files/teacher/intro/304/0fe971acfde0e541ea10aabca66084e2.png">
+                        <a href="#">
+                        <img style="width: 110px; height: 90px;" alt="" src="1.png">
                         </a>
                     </span>
                     <h4>
@@ -285,16 +285,16 @@
                     </h4>
                     <div class="tip">
                         <span class="txt">해커스영어 토익 총평강의 조회수 1위 (2015.01~11)</span><a class="tiper" href="#;"><!-- tooltip --></a>
-                        <div class="ly_tip"><span class="arr"></span>해커스영어 토익 총평강의 조회수 1위 (2015.01~11)</div>
+                        <div class="ly_tip"><span class="arr"></span>1</div>
                     </div>
-                    <a class="btn_detail" href="http://www.champstudy.com/?r=champstudy&amp;c=teacher/tc_toeic&amp;tci_id=23" target="_blank">선생님 자세히보기 &gt;</a>
+                    <a class="btn_detail" href="#" target="_blank">선생님 자세히보기 &gt;</a>
 				
                 </div>
                 
                 <a class="btn_bxctrl open" href="">
                     <span class="stit">${vo.lecture_level }</span>
                     <span class="arr"></span>
-                    <!--<img src="./images/champstudy/applyclass/base_level_tit.png" alt="기초레벨"><span class="bar"></span><img src="./images/champstudy/applyclass/base_level_txt550.png" alt="550점+"><span class="arr"></span>-->
+                    
                 </a>
 
                 <div class="cnt" style="display: block;">
@@ -309,7 +309,7 @@
 							</div>
 							<!-- //BEST/NEW아이콘이동 -->
                             <h5>
-                            <a href="/?r=champstudy&amp;c=lecture/lec_toeic&amp;sub=detail&amp;lec_id=11033">
+                            <a href="#">
                             ${vo.name }                             </a></h5>
                             <p>토익 기출 어휘 30일 정복! l  <font color="blue">${vo.book }</font></p>
                             <ul>
@@ -317,7 +317,7 @@
                                 <li><a><span class="ico mob"></span>Mobile</a></li>
                                 <li><a><span class="ico pc"></span>PC/PMP</a></li>
                                 <li class="bar movie">
-                                	<a href="javascript:goSampleLecture('http://class.champstudy.com/HLec/intro.php?lec_idx=446&amp;ls_num=2&amp;ls_kind=B&amp;lec_no=11033')">
+                                	<a href="#">
                                 		<span class="ico mov"></span>샘플강의
                                 	</a>
                                 </li>
